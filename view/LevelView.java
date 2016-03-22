@@ -76,13 +76,13 @@ public class LevelView extends JPanel{
        bg = new ButtonGroup();
        this.easy = new JRadioButton("Easy");
        easy.setForeground(Color.WHITE);
-       easy.setFont(new java.awt.Font("", Font.ITALIC, 12));
+       easy.setFont(new java.awt.Font("", Font.ITALIC, 24));
        this.medium = new JRadioButton ("Medium");
        medium.setForeground(Color.WHITE);
-       medium.setFont(new java.awt.Font("", Font.ITALIC, 12));
+       medium.setFont(new java.awt.Font("", Font.ITALIC, 24));
        this.hard = new JRadioButton("Hard");
        hard.setForeground(Color.WHITE);
-       hard.setFont(new java.awt.Font("", Font.ITALIC, 12));
+       hard.setFont(new java.awt.Font("", Font.ITALIC, 24));
        bg.add(easy);
        bg.add(medium);
        bg.add(hard);
@@ -123,7 +123,7 @@ public class LevelView extends JPanel{
              
                super.paintComponent(g); //To change body of generated methods, choose Tools | Templates.
                
-               g.drawImage(image, 0, 0, 50, 25, this);
+               g.drawImage(image, 0, 0, 100, 50, this);
              
                
            }
@@ -133,12 +133,12 @@ public class LevelView extends JPanel{
         back.setContentAreaFilled(false);
         back.setBorderPainted(false);
         back.setFocusPainted(false);
-        back.setPreferredSize(new Dimension(50,25));
-        back.setSize(new Dimension(50,25));
+        back.setPreferredSize(new Dimension(100,50));
+        back.setSize(new Dimension(100,50));
   
         bottom.setLayout(new BorderLayout());
         bottom.add(back, BorderLayout.SOUTH);
-        bottom.setBorder(new EmptyBorder(0, 10, 10, 0));
+        bottom.setBorder(new EmptyBorder(0, 5, 5, 0));
         bottom.setOpaque(false);
         
       

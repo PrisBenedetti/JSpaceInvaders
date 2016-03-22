@@ -16,6 +16,7 @@ import java.awt.Image;
 
 public class StartView extends JPanel{
  private JButton start;
+ private JButton load;
  private JButton best_score;
  
    public StartView() {
@@ -29,6 +30,8 @@ public class StartView extends JPanel{
   public void addStartButtonListener(ActionListener al) {
         start.addActionListener(al);
     }
+  
+  public void addLoadButtonListener(ActionListener al){}
     
   public void addBestScoreButtonListener(ActionListener al){
         best_score.addActionListener(al);
@@ -51,12 +54,16 @@ public class StartView extends JPanel{
     private void createCenter(){
        JPanel center = new JPanel();
        this.start = new JButton("start");
+       this.load = new JButton("load");
        this.best_score = new JButton("best score");
        center.setLayout(new BoxLayout(center, BoxLayout.Y_AXIS));
        start.setAlignmentX(CENTER_ALIGNMENT);
        best_score.setAlignmentX(CENTER_ALIGNMENT);
+       load.setAlignmentX(CENTER_ALIGNMENT);
        center.add(javax.swing.Box.createVerticalGlue());
        center.add(start);
+       center.add(javax.swing.Box.createVerticalGlue());
+       center.add(load);
        center.add(javax.swing.Box.createVerticalGlue());
        center.add(best_score);
        center.setOpaque(false);
